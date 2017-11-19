@@ -1,0 +1,6 @@
+The pattern we follow when declaring new components usually includes: declaring a new __________
+
+fill the gap with = class
+
+ and making it extend _________ 
+fill the gap with = React.Component

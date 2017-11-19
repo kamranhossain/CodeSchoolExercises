@@ -1,0 +1,6 @@
+Every component must include a method called _______
+fill the gap with = render
+ 
+ and return some _______
+fill the gap with = JSX
+ markup code.
