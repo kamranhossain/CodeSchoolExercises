@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>{{ username }}</h1><br>
+  {% for location in locations|dictsort:"name" %}
+  <div> <!-- <a href="/{{location.id}}/"> -->
+    <div class="tracker panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{ location.name }}</h3>
+      </div>
+      <div class="panel-body">
+        <div class="tracker-photo">
+            <img src="{{ location.img }}" alt="" height="300"  />
+        </div>
+      </div>
+    </div>
+  </div> <!-- </a> -->
+  {% endfor %}
+{% endblock %}
