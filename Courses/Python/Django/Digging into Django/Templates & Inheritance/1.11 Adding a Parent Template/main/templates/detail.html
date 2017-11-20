@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div class="tracker panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">{{ location.name }}</h2>
+    </div>
+    <div class="panel-body">
+        <div class="tracker-photo-detail">
+            <img src="{{ location.img_url }}" alt="" height="300" />
+        </div>
+        <table class="tracker-table">
+            <tr>
+                <th>
+                    <img src="{% static "images/traveltracker-brand-location-icon.png" %}" alt="Location Icon" />
+                    Location:
+                </th>
+                <td>{{ location.name }}</td>
+            </tr>
+            <tr>
+                <th>
+                    <img src="{% static "images/traveltracker-brand-restaurant-icon.png" %}" alt="Restaurant Icon" />
+                    Number of Restaurants:
+                </th>
+                <td>{{ location.num_restaurants }}</td>
+            </tr>
+            <tr>
+                <th>
+                    <img src="{% static "images/traveltracker-brand-predator-icon.png" %}" alt="Predator Icon" />
+                    Predators:
+                </th>
+                <td>{{ location.predators }}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}

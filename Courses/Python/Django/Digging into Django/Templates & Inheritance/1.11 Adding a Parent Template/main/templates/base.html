@@ -1,0 +1,30 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'style.css' %}" rel="stylesheet" media="screen">
+    <title>Travel Tracker</title>
+</head>
+<body>
+
+  <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <a class="navbar-brand" href="/"><img src="{% static "images/traveltracker-brand.svg" %}" height = 200 alt="Travel Tracker Brand"></a>
+  </nav>
+
+  <main class="container">
+
+      {% block content %}
+      {% endblock %}
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+      <div class="container">
+          <p class="text-muted">&copy; Travel Tracker 2016</p>
+      </div>
+  </footer>
+
+</body>
+</html>
